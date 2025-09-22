@@ -23,7 +23,7 @@ public class SimpleSensorDemo {
             testKit.shutdownTestKit();
         }
         
-        System.out.println("\n✅ Demo 1 Complete!");
+        System.out.println("\n Demo 1 Complete!");
         System.out.println("Key takeaways:");
         System.out.println("- Actors respond to messages asynchronously");
         System.out.println("- Each sensor type generates realistic value ranges");  
@@ -63,7 +63,7 @@ public class SimpleSensorDemo {
     }
     
     private static void demonstrateMultipleReadings(ActorTestKit testKit) {
-        System.out.println("\n📊 Multiple Temperature Readings");
+        System.out.println("\n Multiple Temperature Readings");
         System.out.println("-".repeat(40));
         
         TestProbe<GreenhouseActor.Command> probe = testKit.createTestProbe();
@@ -92,7 +92,7 @@ public class SimpleSensorDemo {
     }
     
     private static void demonstrateMessageTypes(ActorTestKit testKit) {
-        System.out.println("\n💬 Different Message Types");
+        System.out.println("\n Different Message Types");
         System.out.println("-".repeat(40));
         
         TestProbe<GreenhouseActor.Command> probe = testKit.createTestProbe();
