@@ -18,7 +18,8 @@ public final class SensorStream {
         if (greenhouseIds.isEmpty()) return;
         Random rnd = new Random();
 
-        Source<Long, NotUsed> ticks = Source.tick(Duration.ofSeconds(1), Duration.ofSeconds(2), 1L);
+        Source<Long, NotUsed> ticks = Source.tick(Duration.ofSeconds(1), Duration.ofSeconds(2), 1L)
+                .mapMaterializedValue(cancellable -> NotUsed.getInstance());
 
         ticks
             .map(t -> randomEvent(rnd, greenhouseIds))
