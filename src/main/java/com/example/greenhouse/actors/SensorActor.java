@@ -13,8 +13,20 @@ public class SensorActor extends AbstractBehavior<SensorActor.Command> {
     public enum Kind { Temperature, Humidity, SoilMoisture }
 
     public interface Command {}
-    public static final class Read implements Command { public final ActorRef<GreenhouseActor.Command> replyTo; public Read(ActorRef<GreenhouseActor.Command> replyTo){this.replyTo=replyTo;} }
-    public static final class EmitSample implements Command { public final ActorRef<GreenhouseActor.Command> replyTo; public EmitSample(ActorRef<GreenhouseActor.Command> replyTo){this.replyTo=replyTo;} }
+
+    public static final class Read implements Command {
+        public final ActorRef<GreenhouseActor.Command> replyTo;
+        public Read(ActorRef<GreenhouseActor.Command> replyTo){
+            this.replyTo=replyTo;
+        }
+    }
+    
+    public static final class EmitSample implements Command {
+        public final ActorRef<GreenhouseActor.Command> replyTo;
+        public EmitSample(ActorRef<GreenhouseActor.Command> replyTo){
+            this.replyTo=replyTo;
+        }
+    }
 
     private final String greenhouseId;
     private final Kind kind;

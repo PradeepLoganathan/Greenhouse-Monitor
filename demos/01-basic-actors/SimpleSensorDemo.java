@@ -1,7 +1,7 @@
 package demos;
 
 import akka.actor.typed.ActorRef;
-
+import akka.actor.typed.Behavior;
 import akka.actor.testkit.typed.javadsl.ActorTestKit;
 import akka.actor.testkit.typed.javadsl.TestProbe;
 import akka.actor.typed.ActorRef;
@@ -45,9 +45,9 @@ public class SimpleSensorDemo {
         };
         
         for (SensorActor.Kind type : types) {
-            ActorRef<SensorActor.Command> sensor = testKit.spawn(
-                SensorActor.create("demo-greenhouse", type), 
-                "sensor-" + type.name().toLowerCase()
+            // Step 1: Create behavior
+            Behavior<SensorActor.Command> behavior = SensorActor.create("greenhouse-1", type);
+            ActorRef<SensorActor.Command> sensor = testKit.spawn(behavior, "sensor-" + type.name().toLowerCase()
             );
             
             sensor.tell(new SensorActor.EmitSample(probe.getRef()));
