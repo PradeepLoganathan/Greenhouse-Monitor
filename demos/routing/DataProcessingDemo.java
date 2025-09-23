@@ -1,4 +1,4 @@
-package demos;
+package demos.routing;
 
 import akka.actor.testkit.typed.javadsl.ActorTestKit;
 import akka.actor.testkit.typed.javadsl.TestProbe;

@@ -60,12 +60,7 @@
                         </goals>
                         <configuration>
                             <sources>
-                                <source>demos/01-basic-actors</source>
-                                <source>demos/02-greenhouse-control</source>
-                                <source>demos/03-message-routing</source>
-                                <source>demos/04-stream-integration</source>
-                                <source>demos/05-mini-system</source>
-                                <source>demos/06-full-system</source>
+                                <source>demos</source>
                             </sources>
                         </configuration>
                     </execution>
@@ -105,7 +100,7 @@
                         <groupId>org.codehaus.mojo</groupId>
                         <artifactId>exec-maven-plugin</artifactId>
                         <configuration>
-                            <mainClass>demos.SimpleSensorDemo</mainClass>
+                            <mainClass>demos.basic.SimpleSensorDemo</mainClass>
                         </configuration>
                     </plugin>
                 </plugins>
@@ -120,7 +115,7 @@
                         <groupId>org.codehaus.mojo</groupId>
                         <artifactId>exec-maven-plugin</artifactId>
                         <configuration>
-                            <mainClass>GreenhouseControlDemo</mainClass>
+                            <mainClass>demos.control.GreenhouseControlDemo</mainClass>
                         </configuration>
                     </plugin>
                 </plugins>
@@ -135,7 +130,7 @@
                         <groupId>org.codehaus.mojo</groupId>
                         <artifactId>exec-maven-plugin</artifactId>
                         <configuration>
-                            <mainClass>DataProcessingDemo</mainClass>
+                            <mainClass>demos.routing.DataProcessingDemo</mainClass>
                         </configuration>
                     </plugin>
                 </plugins>
@@ -150,7 +145,7 @@
                         <groupId>org.codehaus.mojo</groupId>
                         <artifactId>exec-maven-plugin</artifactId>
                         <configuration>
-                            <mainClass>StreamDemo</mainClass>
+                            <mainClass>demos.streams.StreamDemo</mainClass>
                         </configuration>
                     </plugin>
                 </plugins>
@@ -165,7 +160,7 @@
                         <groupId>org.codehaus.mojo</groupId>
                         <artifactId>exec-maven-plugin</artifactId>
                         <configuration>
-                            <mainClass>MiniSystemDemo</mainClass>
+                            <mainClass>demos.mini.MiniSystemDemo</mainClass>
                         </configuration>
                     </plugin>
                 </plugins>
@@ -180,7 +175,7 @@
                         <groupId>org.codehaus.mojo</groupId>
                         <artifactId>exec-maven-plugin</artifactId>
                         <configuration>
-                            <mainClass>FullSystemDemo</mainClass>
+                            <mainClass>demos.full.FullSystemDemo</mainClass>
                         </configuration>
                     </plugin>
                 </plugins>

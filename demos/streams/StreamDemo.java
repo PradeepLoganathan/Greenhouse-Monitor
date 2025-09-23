@@ -1,4 +1,4 @@
-package demos;
+package demos.streams;
 
 import akka.NotUsed;
 import akka.actor.testkit.typed.javadsl.ActorTestKit;

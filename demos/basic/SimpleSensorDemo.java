@@ -1,4 +1,4 @@
-package demos;
+package demos.basic;
 
 import akka.actor.typed.ActorRef;
 import akka.actor.typed.Behavior;
